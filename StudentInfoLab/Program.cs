@@ -7,6 +7,7 @@ namespace StudentInfoLab
     {
         private static object Student;
         private static int futureStudent;
+        private static object int32;
 
         static void Main(string[] args)
         {
@@ -57,22 +58,37 @@ namespace StudentInfoLab
                         userRequest = int.Parse(Console.ReadLine());
                     }
 
-                    Student requested = students[userRequest-1];
+                    /*try
+                    {
+                        userRequest <= 11;
+                    }
+                    catch(ArgumentOutOfRangeException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }*/
+
+                    Student requested = students[userRequest - 1];
                     Console.WriteLine("Student " + userRequest + " is " + requested.GetStudentName());
 
                     Console.WriteLine("What would you like to know about " + requested.GetStudentName() + " ?");
                     Console.WriteLine("Choose hometown or favorite food");
-                    string choice = Console.ReadLine();
 
+                    string choice = Console.ReadLine();
+                    
                     //Return the proper responses according to user-submitted information
                     if (choice == "hometown")
                     {
                         requested.GetHometown();
                     }
-                    else if (choice == "favorite food") 
+                    else if (choice == "favorite food")
                     {
                         requested.GetFavoriteFood();
                     }
+                    else
+                    {
+                        Console.WriteLine("I do not understand your request. Please enter 'hometown' or 'favorite food'");
+                    }
+
                     run = Continue();
                 }
 
