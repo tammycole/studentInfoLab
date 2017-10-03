@@ -6,6 +6,7 @@ namespace StudentInfoLab
     class Program
     {
         private static object Student;
+        private static int futureStudent;
 
         static void Main(string[] args)
         {
@@ -44,7 +45,17 @@ namespace StudentInfoLab
 
                     //prompt the user to ask about a particular student
                     Console.WriteLine("Which student would you like to learn more about? (enter a number 1-11 ).");
-                    int userRequest = Int32.Parse( Console.ReadLine());
+                    int userRequest = futureStudent;
+
+                    try
+                    {
+                        userRequest = int.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Please Enter a valid numerical value.");
+                        userRequest = int.Parse(Console.ReadLine());
+                    }
 
                     Student requested = students[userRequest-1];
                     Console.WriteLine("Student " + userRequest + " is " + requested.GetStudentName());
