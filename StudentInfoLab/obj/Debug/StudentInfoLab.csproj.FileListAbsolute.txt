@@ -1,0 +1,7 @@
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\bin\Debug\StudentInfoLab.exe.config
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\bin\Debug\StudentInfoLab.exe
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\bin\Debug\StudentInfoLab.pdb
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\obj\Debug\StudentInfoLab.csproj.CoreCompileInputs.cache
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\obj\Debug\StudentInfoLab.exe
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\obj\Debug\StudentInfoLab.pdb
+C:\Users\tammiemarie\Documents\Visual Studio 2017\Projects\StudentInfoLab\StudentInfoLab\obj\Debug\StudentInfoLab.csprojResolveAssemblyReference.cache
