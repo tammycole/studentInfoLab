@@ -5,9 +5,6 @@ namespace StudentInfoLab
 {
     class Program
     {
-        private static object Student;
-        private static int futureStudent;
-        private static object int32;
 
         static void Main(string[] args)
         {
@@ -46,7 +43,7 @@ namespace StudentInfoLab
 
                     //prompt the user to ask about a particular student
                     Console.WriteLine("Which student would you like to learn more about? (enter a number 1-11 ).");
-                    int userRequest = futureStudent;
+                    int userRequest =0;
 
                     try
                     {
@@ -58,6 +55,19 @@ namespace StudentInfoLab
                         userRequest = int.Parse(Console.ReadLine());
                     }
 
+                    /*try
+                    {
+                        if (userRequest <= 11)
+                        {
+
+                        }
+                    }
+                    catch (IndexOutOfRangeException e)
+                    {
+                        Console.WriteLine(e);
+                    }*/
+                    
+                    
                     /*try
                     {
                         userRequest <= 11;
@@ -74,19 +84,26 @@ namespace StudentInfoLab
                     Console.WriteLine("Choose hometown or favorite food");
 
                     string choice = Console.ReadLine();
-                    
+
+                    try
                     //Return the proper responses according to user-submitted information
-                    if (choice == "hometown")
                     {
-                        requested.GetHometown();
+                        if (choice == "hometown")
+                        {
+                            requested.GetHometown();
+                        }
+                        else if (choice == "favorite food")
+                        {
+                            requested.GetFavoriteFood();
+                        }
+                        else
+                        {
+                            Console.WriteLine("I do not understand your request. Please enter 'hometown' or 'favorite food' next time.");
+                        }
                     }
-                    else if (choice == "favorite food")
+                    catch (Exception e)
                     {
-                        requested.GetFavoriteFood();
-                    }
-                    else
-                    {
-                        Console.WriteLine("I do not understand your request. Please enter 'hometown' or 'favorite food'");
+                        Console.WriteLine(e);
                     }
 
                     run = Continue();
