@@ -49,8 +49,9 @@ namespace StudentInfoLab
                     {
                         userRequest = int.Parse(Console.ReadLine());
                     }
-                    catch
+                    catch(FormatException e)
                     {
+                        Console.WriteLine(e.StackTrace);
                         Console.WriteLine("Please Enter a valid numerical value.");
                         userRequest = int.Parse(Console.ReadLine());
                     }
@@ -66,8 +67,8 @@ namespace StudentInfoLab
                     {
                         Console.WriteLine(e);
                     }*/
-                    
-                    
+
+
                     /*try
                     {
                         userRequest <= 11;
@@ -76,8 +77,18 @@ namespace StudentInfoLab
                     {
                         Console.WriteLine(e.Message);
                     }*/
+                    Student requested;
+                    try
+                    {
+                        requested = students[userRequest - 1];
+                    }
+                    catch(ArgumentOutOfRangeException e)
+                    {
+                        requested = new Student("Error", -1, "Error", "Error");
+                        Console.WriteLine(e);
 
-                    Student requested = students[userRequest - 1];
+                    }
+
                     Console.WriteLine("Student " + userRequest + " is " + requested.GetStudentName());
 
                     Console.WriteLine("What would you like to know about " + requested.GetStudentName() + " ?");

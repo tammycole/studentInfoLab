@@ -18,7 +18,6 @@ namespace StudentInfoLab
         { get; set; }
         private string favoriteFood
         { get; set; }
-        public static string requested { get; internal set; }
 
         //this is a special method called the constructor  
         //Whenever we want to build an object we call this method
@@ -37,7 +36,7 @@ namespace StudentInfoLab
         {
             return name;
         }
-
+                                                                                                            
         public int GetStudentNumber()
         {
             return studentNumber;
